@@ -1,0 +1,198 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="66wGDml5zK4bVrhD7v-K">
+    <mxGraphModel dx="2333" dy="894" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ifGTOa1pRS48upJa7ey5-2" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Program run by user" vertex="1">
+          <mxGeometry height="80" width="120" x="210" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-4" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="270" y="120" as="sourcePoint" />
+            <mxPoint x="270" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-7" edge="1" parent="1" source="ifGTOa1pRS48upJa7ey5-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="270" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-5" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;" value="Parse Command-line arguments (argparse)" vertex="1">
+          <mxGeometry height="60" width="120" x="210" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-8" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="Does data.csv exist?" vertex="1">
+          <mxGeometry height="80" width="80" x="230" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-9" edge="1" parent="1" source="ifGTOa1pRS48upJa7ey5-8" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" x="-0.075" as="geometry">
+            <Array as="points">
+              <mxPoint x="270" y="420" />
+            </Array>
+            <mxPoint x="260" y="380" as="sourcePoint" />
+            <mxPoint x="270" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-10" connectable="0" parent="ifGTOa1pRS48upJa7ey5-9" style="edgeLabel;resizable=0;html=1;inheritText=1;;align=center;verticalAlign=middle;defaultLabelBackgroundColor=page;" value="Yes" vertex="1">
+          <mxGeometry relative="1" x="-0.075" as="geometry" />
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-12" edge="1" parent="1" source="ifGTOa1pRS48upJa7ey5-17" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="130" y="340" as="sourcePoint" />
+            <mxPoint x="170" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-18" edge="1" parent="1" source="ifGTOa1pRS48upJa7ey5-8" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;" target="ifGTOa1pRS48upJa7ey5-17" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="180" y="340" />
+            </Array>
+            <mxPoint x="230" y="340" as="sourcePoint" />
+            <mxPoint x="170" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-19" connectable="0" parent="ifGTOa1pRS48upJa7ey5-18" style="edgeLabel;resizable=0;html=1;inheritText=1;;align=center;verticalAlign=middle;defaultLabelBackgroundColor=page;" value="No" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-17" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="downloadData.py" vertex="1">
+          <mxGeometry height="60" width="120" x="50" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-20" edge="1" parent="1" source="ifGTOa1pRS48upJa7ey5-17" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="110" y="410" />
+            </Array>
+            <mxPoint x="110" y="420" as="sourcePoint" />
+            <mxPoint x="110" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-26" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;" value="Write to data.csv" vertex="1">
+          <mxGeometry height="60" width="120" x="50" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-29" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;" value="Read data.csv" vertex="1">
+          <mxGeometry height="60" width="120" x="210" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-32" edge="1" parent="1" source="ifGTOa1pRS48upJa7ey5-29" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.425;entryY=-0.094;entryDx=0;entryDy=0;entryPerimeter=0;" target="ifGTOa1pRS48upJa7ey5-40" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="250" y="490" as="sourcePoint" />
+            <mxPoint x="271.32000000000005" y="538.3199999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-34" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="ifGTOa1pRS48upJa7ey5-29" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="160" y="460" as="sourcePoint" />
+            <mxPoint x="210" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-51" edge="1" parent="1" source="ifGTOa1pRS48upJa7ey5-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;" target="ifGTOa1pRS48upJa7ey5-50" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-40" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="sortThrows.py (sorts throws into zones)" vertex="1">
+          <mxGeometry height="60" width="120" x="220" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-44" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="Does qb_cpoe.csv exist?" vertex="1">
+          <mxGeometry height="80" width="80" x="230" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-46" edge="1" parent="1" source="ifGTOa1pRS48upJa7ey5-44" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="ifGTOa1pRS48upJa7ey5-29" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="270" y="510" as="sourcePoint" />
+            <mxPoint x="270" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-47" connectable="0" parent="ifGTOa1pRS48upJa7ey5-46" style="edgeLabel;resizable=0;html=1;inheritText=1;;align=center;verticalAlign=middle;defaultLabelBackgroundColor=page;" value="No" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-48" edge="1" parent="1" source="ifGTOa1pRS48upJa7ey5-44" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;" target="ifGTOa1pRS48upJa7ey5-54" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="310" y="470" as="sourcePoint" />
+            <mxPoint x="410" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-49" connectable="0" parent="ifGTOa1pRS48upJa7ey5-48" style="edgeLabel;resizable=0;html=1;inheritText=1;;align=center;verticalAlign=middle;defaultLabelBackgroundColor=page;" value="Yes" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-53" edge="1" parent="1" source="ifGTOa1pRS48upJa7ey5-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;" target="ifGTOa1pRS48upJa7ey5-52" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-50" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="calcAverage.py (calculates average cpoe per zone)" vertex="1">
+          <mxGeometry height="60" width="120" x="420" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-55" edge="1" parent="1" source="ifGTOa1pRS48upJa7ey5-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;" value="">
+          <mxGeometry relative="1" x="1" as="geometry">
+            <mxPoint x="480" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-52" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;rounded=0;" value="write to qb_cpoe.csv" vertex="1">
+          <mxGeometry height="60" width="120" x="420" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-57" edge="1" parent="1" source="ifGTOa1pRS48upJa7ey5-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="ifGTOa1pRS48upJa7ey5-63" value="">
+          <mxGeometry relative="1" x="-0.3158" as="geometry" />
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-54" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="read qb_cpoe.csv" vertex="1">
+          <mxGeometry height="60" width="120" x="420" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-59" edge="1" parent="1" source="ifGTOa1pRS48upJa7ey5-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;" target="ifGTOa1pRS48upJa7ey5-58" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-56" parent="1" style="whiteSpace=wrap;html=1;rounded=0;allowArrows=0;" value="filterData.py (filters to user selected qb)" vertex="1">
+          <mxGeometry height="60" width="120" x="610" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-58" parent="1" style="whiteSpace=wrap;html=1;rounded=0;" value="visualizeHeatmap.py (creates and displays the heatmap)" vertex="1">
+          <mxGeometry height="60" width="120" x="420" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-60" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="End" vertex="1">
+          <mxGeometry height="80" width="120" x="420" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-61" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="ifGTOa1pRS48upJa7ey5-60" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="480" y="160" as="sourcePoint" />
+            <mxPoint x="530" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-63" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="Does the user&#39;s qb exist?&amp;nbsp;" vertex="1">
+          <mxGeometry height="80" width="80" x="440" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-64" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;entryX=0;entryY=1;entryDx=0;entryDy=0;" target="ifGTOa1pRS48upJa7ey5-56" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="520" y="350" as="sourcePoint" />
+            <mxPoint x="620" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-65" connectable="0" parent="ifGTOa1pRS48upJa7ey5-64" style="edgeLabel;resizable=0;html=1;inheritText=1;;align=center;verticalAlign=middle;defaultLabelBackgroundColor=page;" value="Yes" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-71" edge="1" parent="1" source="ifGTOa1pRS48upJa7ey5-63" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="340" y="350" as="sourcePoint" />
+            <mxPoint x="380" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-72" connectable="0" parent="ifGTOa1pRS48upJa7ey5-71" style="edgeLabel;resizable=0;html=1;inheritText=1;;align=center;verticalAlign=middle;defaultLabelBackgroundColor=page;" value="No" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-75" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;shapeInside=1;fixedSize=1;" value="Display error message" vertex="1">
+          <mxGeometry height="60" width="70" x="330" y="211" as="geometry" />
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-76" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;entryX=0;entryY=1;entryDx=0;entryDy=0;" target="ifGTOa1pRS48upJa7ey5-60" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="360" y="210" as="sourcePoint" />
+            <mxPoint x="410" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-77" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Data downloaded from nflverse via nflreadpy" vertex="1">
+          <mxGeometry height="30" width="60" x="-20" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="ifGTOa1pRS48upJa7ey5-80" edge="1" parent="1" source="ifGTOa1pRS48upJa7ey5-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;innerLoopWaypoints=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.67;entryY=0.629;entryDx=0;entryDy=0;entryPerimeter=0;defaultLabelBackgroundColor=page;" target="ifGTOa1pRS48upJa7ey5-77">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
