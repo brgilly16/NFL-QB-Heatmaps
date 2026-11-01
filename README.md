@@ -7,7 +7,7 @@ When I was watching the NFL games today, I noticed that quarterbacks vary signif
 
 ## How It Works
 
-![System Diagram](plan/system-diagram.png)
+![System Diagram](plan/SystemDiagram.drawio.png)
 
 ## MVP Scope
 - Command-line input to pick the QB.
@@ -23,8 +23,6 @@ When I was watching the NFL games today, I noticed that quarterbacks vary signif
 
 ## Setup
 
-Step-by-step: how does someone who just cloned your repo get it
-running?
 
 ```bash
 git clone https://github.com/brgilly16/NFL-QB-Heatmaps
@@ -35,8 +33,6 @@ python src/main.py "P.Mahomes"
 
 ## Roadmap
 
-Features you haven't built yet but plan to (pull these from your
-"Schedule" quadrant in the Eisenhower Matrix).
 
 - [ ] Comparison of two QB’s
 - [ ] Simple GUI in Java that allows selection of QB’s.
