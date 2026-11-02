@@ -7,7 +7,7 @@ When I was watching the NFL games today, I noticed that quarterbacks vary signif
 
 ## How It Works
 
-![System Diagram](System%20Diagram.drawio.png)
+![System Diagram](System%20Diagram.png)
 
 ## MVP Scope
 - Command-line input to pick the QB.
