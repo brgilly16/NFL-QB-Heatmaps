@@ -1,7 +1,7 @@
 from download_data import load
 from sort_throws import sort
-import os
-if not os.path.exists("data/data.csv"):
+from paths import DATA_CSV, QB_CPOE_CSV
+if not DATA_CSV.exists():
     load()
-if not os.path.exists("qb_cpoe.csv"):
+if not QB_CPOE_CSV.exists():
     sort()

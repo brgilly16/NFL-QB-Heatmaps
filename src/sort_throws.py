@@ -23,4 +23,3 @@ def sort():
     qb_df_grouped = qb_df.groupby(["passer_player_id", "passer_player_name", "depth", "pass_location"], observed=True)["cpoe"]
     qb_cpoe = qb_df_grouped.agg(cpoe="mean", throws="count").reset_index() # Get the average CPOE for each zone and the throw count per zone, then reset index to make the index cols normal cols again
     qb_cpoe.to_csv(QB_CPOE_CSV, index=False)
-    
