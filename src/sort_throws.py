@@ -15,7 +15,7 @@ def filter_throws(df):
     ]
     cols = ["air_yards", "pass_location", "passer_player_name", "passer_player_id", "cpoe"]
     df = df[cols]
-    df["depth"] = pd.cut(df["air_yards"], bins=[0, 10, 20, 100], labels=["short", "middle", "deep"], right=False)
+    df["depth"] = pd.cut(df["air_yards"], bins=[0, 10, 20, 100], labels=["short", "intermediate", "deep"], right=False)
     return df
 def sort():
     qb_df = pd.read_csv(DATA_CSV, low_memory=False) # low_memory=False to get rid of the warning every time it runs
