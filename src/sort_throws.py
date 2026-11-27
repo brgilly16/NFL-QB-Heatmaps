@@ -1,4 +1,5 @@
 import pandas as pd
+import nflreadpy as nfl
 from paths import DATA_CSV, QB_CPOE_CSV
 # helper function to simplify sort function
 # removes plays with no passes and plays like sacks, two point conversions, NA air yards, etc...
@@ -22,4 +23,8 @@ def sort():
     qb_df = filter_throws(qb_df)
     qb_df_grouped = qb_df.groupby(["passer_player_id", "passer_player_name", "depth", "pass_location"], observed=True)["cpoe"]
     qb_cpoe = qb_df_grouped.agg(cpoe="mean", throws="count").reset_index() # Get the average CPOE for each zone and the throw count per zone, then reset index to make the index cols normal cols again
+    players = nfl.load_players().to_pandas()[["gsis_id", "display_name", "position"]]
+    qb_cpoe = qb_cpoe.merge(players, left_on="passer_player_id", right_on="gsis_id", how="left")
+    qb_cpoe = qb_cpoe.drop(columns="gsis_id")
+    qb_cpoe = qb_cpoe[qb_cpoe["position"] == "QB"]
     qb_cpoe.to_csv(QB_CPOE_CSV, index=False)

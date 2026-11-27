@@ -6,7 +6,7 @@ from filter_data import filter
 from visualize_heatmap import visualize
 def getArgs():
     parser = argparse.ArgumentParser()
-    parser.add_argument("qb", nargs="+", help="QB name (first space last) e.g. Josh Allen")
+    parser.add_argument("qb", nargs="+", help="QB name (First space Last) e.g. Josh Allen")
     return parser.parse_args()
 def main():
     args = getArgs()
@@ -15,6 +15,6 @@ def main():
         load()
     if not QB_CPOE_CSV.exists():
         sort()
-    visualize(filter(chosen_qb), chosen_qb)
+    visualize(filter(chosen_qb))
 if __name__ == "__main__":
     main()
