@@ -1,11 +1,15 @@
 import pandas as pd
 from paths import QB_CPOE_CSV
 def filter(name): # where name is a string name (first, space, last) of the qb
-    separated = name.split()
+    separated = name.lower().split()
     first = separated[0]
     last = separated[1]
     first_initial = first[0]
     selected_qb_name = first_initial + "." + last
     qb_df = pd.read_csv(QB_CPOE_CSV)
+    qb_df["passer_player_name"] = qb_df["passer_player_name"].str.lower()
     selected_qb_df = qb_df[qb_df["passer_player_name"] == selected_qb_name]
+    if selected_qb_df.empty:
+        print(f"Couldn't find an NFL QB named {name}")
+        return
     return selected_qb_df
