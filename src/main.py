@@ -11,10 +11,14 @@ def getArgs():
 def main():
     args = getArgs()
     chosen_qb = " ".join(args.qb)
-    if not DATA_CSV.exists():
-        load()
-    if not QB_CPOE_CSV.exists():
-        sort()
+    try:
+        if not DATA_CSV.exists():
+            load()
+        if not QB_CPOE_CSV.exists():
+            sort()
+    except ConnectionError:
+        print("Couldn't download NFL data. Check your internet connection and try again.")
+        return
     visualize(filter(chosen_qb))
 if __name__ == "__main__":
     main()

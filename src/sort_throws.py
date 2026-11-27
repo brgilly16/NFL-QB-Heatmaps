@@ -16,6 +16,7 @@ def filter_throws(df):
     ]
     cols = ["air_yards", "pass_location", "passer_player_name", "passer_player_id", "cpoe"]
     df = df[cols]
+    # Exclude throws behind the line of scrimmage through the usage of the bins in pd.cut. separate the rest into their depths (short: 0-10, intermediate: 10-20, deep: 20+)
     df["depth"] = pd.cut(df["air_yards"], bins=[0, 10, 20, 100], labels=["short", "intermediate", "deep"], right=False)
     return df
 def sort():
@@ -23,8 +24,8 @@ def sort():
     qb_df = filter_throws(qb_df)
     qb_df_grouped = qb_df.groupby(["passer_player_id", "passer_player_name", "depth", "pass_location"], observed=True)["cpoe"]
     qb_cpoe = qb_df_grouped.agg(cpoe="mean", throws="count").reset_index() # Get the average CPOE for each zone and the throw count per zone, then reset index to make the index cols normal cols again
-    players = nfl.load_players().to_pandas()[["gsis_id", "display_name", "position"]]
-    qb_cpoe = qb_cpoe.merge(players, left_on="passer_player_id", right_on="gsis_id", how="left")
+    players = nfl.load_players().to_pandas()[["gsis_id", "display_name", "position"]] 
+    qb_cpoe = qb_cpoe.merge(players, left_on="passer_player_id", right_on="gsis_id", how="left") # add the full name to the csv so that I can filter for full names when they are needed (shared first initial and last names)
     qb_cpoe = qb_cpoe.drop(columns="gsis_id")
-    qb_cpoe = qb_cpoe[qb_cpoe["position"] == "QB"]
+    qb_cpoe = qb_cpoe[qb_cpoe["position"] == "QB"] # filter out non-qbs.
     qb_cpoe.to_csv(QB_CPOE_CSV, index=False)
