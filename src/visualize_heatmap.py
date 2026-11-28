@@ -2,7 +2,10 @@ import matplotlib.pyplot as plt
 def visualize(df):
     # sometimes filter may return None if the input is wrong or something. In that case execution should be stopped.
     if df is None:
-        return  
+        return
+    # adjustment for the compare feature. another way to implement the compare feature would have been to put both heatmaps on the same plot using plt.subplots and all the related tools that comes with that.
+    # however, I am the main user for this project and I preferred the version of the feature that uses two separate plots, so that is the one I chose.
+    plt.figure() 
     depths = ["short", "intermediate", "deep"]
     sides = ["left", "middle", "right"]
     # create the grid tables that are used to create the heatmap
@@ -24,5 +27,4 @@ def visualize(df):
             plt.text(col, row, f"{cpoe:.2f}\n{throws} throws", ha="center", va="center", color=text_color)
     plt.xticks([0, 1, 2], ["Left", "Middle", "Right"])
     plt.yticks([0, 1, 2], ["Short (0-10 yards)", "Intermediate (10-20 yards)", "Deep (20+ yards)"])
-    plt.title(df["display_name"].iloc[0] + " CPOE by Zone")
-    plt.show()  
+    plt.title(df["display_name"].iloc[0] + " CPOE by Zone")  
