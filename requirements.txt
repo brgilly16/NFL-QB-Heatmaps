@@ -1,4 +1,4 @@
 nflreadpy
 pandas
 matplotlib
-numpy
+pyarrow
